@@ -1,0 +1,9 @@
+/* pages/articles/articles.wxss */
+.single-article {
+  font-size: 30rpx;
+  padding: 20rpx 20rpx;
+  border: 4rpx solid #eee;
+}
+.hover-article {
+  background: #eee;
+}
