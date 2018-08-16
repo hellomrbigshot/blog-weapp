@@ -1,0 +1,6 @@
+@import '/towxml/style/main.wxss';
+@import '/towxml/style/theme/light.wxss';
+
+.article-title {
+  text-align: center;
+}

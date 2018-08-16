@@ -1,0 +1,6 @@
+<!--pages/articleContent/articleContent.wxml-->
+<import src="/towxml/entry.wxml"/>
+<view>
+  <view class='article-title'>{{article.title}}</view>
+  <template is="entry" data="{{...content}}"/>
+</view>
