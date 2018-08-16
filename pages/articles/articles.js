@@ -27,7 +27,10 @@ Page({
       success: (res) => {
         if (res.data.code === 'OK') {
           this.setData({
-            articles: res.data.data.result
+            articles: res.data.data.result.map(item => {
+              item.create_date = item.create_date.substr(0, 10);
+              return item;
+            })
           })
         }
       }

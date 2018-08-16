@@ -1,14 +1,12 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/articles/articles",
     "pages/articleContent/articleContent"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "世说新语",
     "navigationBarTextStyle": "black"
   }
 }

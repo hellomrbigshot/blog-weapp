@@ -1,9 +1,25 @@
 /* pages/articles/articles.wxss */
 .single-article {
-  font-size: 30rpx;
   padding: 20rpx 20rpx;
   border: 4rpx solid #eee;
 }
 .hover-article {
   background: #eee;
+}
+.single-article .article-title {
+  font-size: 43rpx;
+  font-family: 微软雅黑
+}
+.article-create-info {
+  font-size: 22rpx;
+  margin-top: 10rpx;
+}
+.article-create-info-item:last-child {
+  margin-left: 20rpx;
+}
+.article-create-info-item .article-create-info-detail {
+  margin-left: 8rpx;
+}
+.article-create-info-item, .article-create-info-item .article-create-info-detail {
+  display: inline-block;
 }
