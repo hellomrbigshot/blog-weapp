@@ -1,42 +1,18 @@
-// pages/articles/articles.js
-const app = getApp();
+// apges/index/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    seach_str: '',
-    articles: []
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const self = this;
-    wx.request({
-      url: 'https://m.hellomrbigbigshot.xyz/api/page/pagelist',
-      method: 'POST',
-      data: {
-        status: 'normal',
-        secret: false,
-        sort: 'update_date'
-      },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded' 
-      },
-      success: (res) => {
-        if (res.data.code === 'OK') {
-          this.setData({
-            articles: res.data.data.result.map(item => {
-              item.create_date = item.create_date.substr(0, 10);
-              return item;
-            })
-          })
-        }
-      }
-    })
+  
   },
 
   /**
