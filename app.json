@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/articles/articles",
+    "pages/index/index",
     "pages/articleContent/articleContent"
   ],
   "window": {

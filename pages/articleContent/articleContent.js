@@ -19,7 +19,7 @@ Page({
       id: options.id
     })
     wx.request({
-      url: 'http://hellomrbigbigshot.xyz/api/page/detail',
+      url: 'https://m.hellomrbigbigshot.xyz/api/page/detail',
       method: 'POST',
       data: {
         id: this.data.id,

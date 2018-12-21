@@ -7,7 +7,8 @@ Page({
    */
   data: {
     seach_str: '',
-    articles: []
+    articles: [],
+    active: 0
   },
 
   /**
@@ -86,5 +87,8 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  onChange: function () {
+    
   }
 })
