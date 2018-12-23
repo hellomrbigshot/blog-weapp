@@ -16,7 +16,7 @@
           <view class='article-create-info-detail'>{{ item.create_user }}</view>
         </view>
         <view class='article-create-info-item'>
-          <view class='article-create-info-detail'>{{ item.create_date }}</view>
+          <view class='article-create-info-detail'>{{ item.update_date }}</view>
         </view>
       </view>
     </navigator>

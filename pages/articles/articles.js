@@ -1,4 +1,5 @@
 // pages/articles/articles.js
+const util = require('../../utils/util.js')
 const app = getApp();
 Page({
 
@@ -31,7 +32,8 @@ Page({
         if (res.data.code === 'OK') {
           this.setData({
             articles: res.data.data.result.map(item => {
-              item.create_date = item.create_date.substr(0, 10);
+              item.create_date = util.formatTime(item.create_date, '3');
+              item.update_date = util.formatTime(item.update_date, '3');
               return item;
             })
           })

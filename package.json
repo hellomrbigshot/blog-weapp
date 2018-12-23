@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@types/node": "^10.12.18",
     "vant-weapp": "^0.4.10"
   }
 }
