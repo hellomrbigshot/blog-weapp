@@ -1,6 +1,32 @@
 <!--pages/articleContent/articleContent.wxml-->
 <import src="/towxml/entry.wxml"/>
-<view>
-  <view class='article-title'>{{article.title}}</view>
-  <template is="entry" data="{{...content}}"/>
+<view class="container">
+  <view class="" hover-class="" hover-stop-propagation="false">
+    <view class="detail-container" hover-class="none" hover-stop-propagation="false">
+      <view class='article-header'>
+        <view class="article-title" hover-class="none" hover-stop-propagation="false">
+          {{article.title}}
+        </view>
+        <view class="article-info" hover-class="none" hover-stop-propagation="false" wx:if="article.create_user">
+          <img src="https://m.hellomrbigbigshot.xyz/api/file/avatar/user?username={{article.create_user}}" class="article-avatar" mode="aspectFit"/>
+          <view class="article-info-text" hover-class="none" hover-stop-propagation="false">
+            <view class="article-create">{{article.create_user}}</view>
+            <view class="article-time">{{article.create_date}}</view>
+          </view>
+            
+        </view>
+        
+      </view>
+      <template is="entry" data="{{...content}}"/>
+    </view>
+  </view>
+  <view class="comment-container">
+    <view class="comment-header">评论({{comments.length}})</view>
+    <view class="comment-list" wx:if="comments.length">
+
+    </view>
+    <view wx:else></view>
+  </view>
+      
+  
 </view>

@@ -1,8 +1,40 @@
 @import '/towxml/style/main.wxss';
-@import '/towxml/style/theme/light.wxss';
-@import '/towxml/style/theme/dark.wxss';
+/* @import '/towxml/style/theme/light.wxss'; */
 
+.detail-container {
+  margin: 20rpx 0;
+  padding: 30rpx;
+  background: #fff;
+}
 .article-title {
-  text-align: center;
-  font-size: 40rpx;
+  font-size: 64rpx;
+  margin: 40rpx 0;
+  font-weight: 700;
+}
+.article-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  display: inline-block;
+}
+.article-info-text {
+  display: inline-block;
+}
+.article-create {
+  font-size: 30rpx;
+  color: #28a946;
+}
+.article-time {
+  font-size: 26rpx;
+  color: #909090;
+}
+.comment-container {
+  margin-bottom: 20rpx;
+  background: #fff;
+  font-size: 28rpx;
+}
+.comment-header {
+  padding: 20rpx 30rpx;
+  color: #555;
+  border-bottom: 1px solid #ddd;
 }

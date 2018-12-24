@@ -1,5 +1,6 @@
 // pages/articleContent/articleContent.js
 const app = getApp();
+const util = require('../../utils/util.js');
 Page({
   /**
    * 页面的初始数据
@@ -14,16 +15,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
     this.setData({
       id: options.id
     })
+    console.log(this.data.id);
     wx.request({
       url: 'https://m.hellomrbigbigshot.xyz/api/page/detail',
       method: 'POST',
       data: {
         id: this.data.id,
-        content: ''
+        content: '',
+        comments: []
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded'
@@ -40,8 +42,29 @@ Page({
 
           //设置数据
           this.setData({
-            content: data
+            content: data,
+            'article.create_date': util.formatTime(this.data.article.create_date, '3')
           });
+        }
+      }
+    })
+    wx.request({
+      url: 'https://m.hellomrbigbigshot.xyz/api/comment/getpagecommentlist',
+      method: 'POST',
+      data: {
+        page_id: this.data.id
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: (res) => {
+        if (res.data.code === 'OK') {
+          this.setData({
+            comments: res.data.data.map(item => {
+              item.create_time = util.formatTime(item.create_time);
+              return item;
+            })
+          })
         }
       }
     })
