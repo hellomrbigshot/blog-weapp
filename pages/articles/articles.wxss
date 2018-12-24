@@ -1,4 +1,7 @@
 /* pages/articles/articles.wxss */
+@import '/towxml/style/main.wxss';
+@import '/towxml/style/theme/light.wxss';
+@import '/towxml/style/theme/dark.wxss';
 .item {
   padding: 20rpx 30rpx;
   background: #fff;
@@ -7,10 +10,24 @@
 .hover-article {
   background: #eee;
 }
+.articles-list {
+  margin-bottom: 100rpx;
+}
 .article-title {
   font-size: 36rpx;
   padding: 10rpx 0;
   font-weight: 500;
+}
+.article-content {
+  font-size: 28rpx;
+  margin-bottom: 30rpx;
+  color: #888;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.5;
+  word-break: break-all;
+  overflow: hidden;
 }
 .article-tag {
   font-size: 28rpx;
@@ -25,17 +42,25 @@
 .article-tag .article-tag-dot {
   display: inline;
 }
-.article-tag 
 .article-create-info {
-  font-size: 22rpx;
-  margin-top: 10rpx;
+  font-size: 26rpx;
 }
-.article-create-info-item:last-child {
-  margin-left: 20rpx;
-}
-.article-create-info-item .article-create-info-detail {
-  margin-left: 8rpx;
-}
-.article-create-info-item, .article-create-info-item .article-create-info-detail {
+.article-create-info-detail {
   display: inline-block;
+  font-size: 0;
+  vertical-align:middle;
+}
+.article-create-info-detail {
+  font-size: 26rpx;
+}
+.article-create-info-user {
+  color: #28a946;
+}
+
+.article-create-info-dot {
+  padding: 0 10rpx;
+  color: #9e9e9e;
+}
+.article-create-info-time {
+  color: #9e9e9e;
 }

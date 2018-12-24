@@ -1,6 +1,7 @@
 <!--pages/articles/articles.wxml-->
+<import src="/towxml/entry.wxml"/>
 <view class='container'>
-  <scroll-view scroll-y>
+  <view class="articles-list">
     <navigator wx:for="{{articles}}"  wx:for-index="i" wx:key="{{index}}" hover-class="hover-article" class="item" url="../articleContent/articleContent?id={{item._id}}">
       <view class='article-tag'>来自标签
         <view wx:for="{{item.tags}}"  wx:for-index="j" wx:key="j" wx:for-item="tag" class='article-tag-name'>
@@ -11,16 +12,14 @@
       <view>
         <view class='article-title'>{{item.title}}</view>
       </view>
+      <view class="article-content" hover-class="" hover-stop-propagation="false">{{ item.content }}</view>
       <view class='article-create-info'>
-        <view class='article-create-info-item'>
-          <view class='article-create-info-detail'>{{ item.create_user }}</view>
-        </view>
-        <view class='article-create-info-item'>
-          <view class='article-create-info-detail'>{{ item.update_date }}</view>
-        </view>
+        <view class='article-create-info-detail article-create-info-user'>{{ item.create_user }}</view>
+        <view class='article-create-info-detail article-create-info-dot'>·</view>
+        <view class='article-create-info-detail article-create-info-time'>{{ item.update_date }}</view>
       </view>
     </navigator>
-  </scroll-view>
+  </view>
   <van-tabbar active="{{ active }}" bind:change="onChange">
     <van-tabbar-item icon="shop">标签</van-tabbar-item>
     <van-tabbar-item icon="chat">标签</van-tabbar-item>
