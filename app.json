@@ -2,7 +2,9 @@
   "pages": [
     "pages/articles/articles",
     "pages/index/index",
-    "pages/articleContent/articleContent"
+    "pages/articleContent/articleContent",
+    "pages/tags/tags",
+    "pages/tagContent/tagContent"
   ],
   "window": {
     "backgroundTextStyle": "light",

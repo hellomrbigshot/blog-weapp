@@ -32,6 +32,12 @@
   font-size: 26rpx;
   color: #909090;
 }
+.article-tags {
+  margin: 60rpx 0 20rpx;
+}
+.article-tag-item {
+  margin-right: 10rpx;
+}
 .comment-container {
   margin-bottom: 20rpx;
   background: #fff;
@@ -40,6 +46,7 @@
 .comment-header {
   padding: 20rpx 30rpx;
   color: #555;
+  border-bottom: 2rpx solid #ddd;
 }
 .comment-item {
   padding: 0 30rpx 20rpx;
@@ -67,4 +74,10 @@
 .comment-content {
   padding: 0 0 10rpx 70rpx;
   color: #555;
+}
+.comment-empty {
+  font-size: 14px;
+  color: #ddd;
+  padding: 40px 100px;
+  text-align: center;
 }

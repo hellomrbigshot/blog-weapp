@@ -8,7 +8,8 @@ Page({
   data: {
     id: '',
     article: {},
-    content: {}
+    content: {},
+    comments: []
   },
 
   /**
@@ -24,8 +25,7 @@ Page({
       method: 'POST',
       data: {
         id: this.data.id,
-        content: '',
-        comments: []
+        content: ''
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded'
@@ -61,7 +61,7 @@ Page({
         if (res.data.code === 'OK') {
           this.setData({
             comments: res.data.data.map(item => {
-              item.create_time = util.formatTime(item.create_time);
+              item.create_time = util.formatTime(item.create_time, '3');
               return item;
             })
           })

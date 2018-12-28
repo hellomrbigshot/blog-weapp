@@ -10,7 +10,7 @@
 .hover-article {
   background: #eee;
 }
-.articles-list {
+.article-list {
   margin-bottom: 100rpx;
 }
 .article-title {

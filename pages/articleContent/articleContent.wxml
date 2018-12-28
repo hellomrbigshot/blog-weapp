@@ -13,17 +13,19 @@
             <view class="article-create">{{article.create_user}}</view>
             <view class="article-time">{{article.create_date}}</view>
           </view>
-            
         </view>
-        
       </view>
       <template is="entry" data="{{...content}}"/>
+      <view class="article-tags">
+        <van-tag plain size="medium" wx:for="{{article.tags}}" wx:key="i" wx:for-item="tag" class="article-tag-item">{{tag}}</van-tag>
+      </view>
     </view>
   </view>
   <view class="comment-container">
     <view class="comment-header">评论({{comments.length}})</view>
-    <view class="comment-list" wx:if="comments.length">
-      <view class="comment-item" wx:for="{{comments}}" wx:for-item="comment">
+    <view wx:if="{{!comments.length}}" class="comment-empty">暂时没有评论</view>
+    <view wx:else class="comment-list">
+      <view class="comment-item" wx:for="{{comments}}" wx:for-item="comment" wx:for-index="i" wx:key="i">
         <view class="comment-item-head">
           <image src="https://m.hellomrbigbigshot.xyz/api/file/avatar/user?username={{comment.create_user}}" class="article-avatar" class="comment-avatar" mode="aspectFit"/>
           <view class="comment-user">{{comment.create_user}}</view>
@@ -31,10 +33,6 @@
         <view class="comment-content">{{comment.content}}</view>
         <view class="comment-time">{{comment.create_time}}</view>
       </view>
-        
     </view>
-    <view wx:else class="comment-empty">暂时没有评论</view>
   </view>
-      
-  
 </view>

@@ -34,13 +34,25 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "博客详情页",
 					"pathName": "pages/articleContent/articleContent",
-					"query": "id=5ba4528b0a1aa03daa588343"
+					"query": "id=5c19a3909c156142838e3926"
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "标签列表页",
+					"pathName": "pages/tags/tags",
+					"query": ""
 				}
 			]
 		}
