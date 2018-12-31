@@ -19,7 +19,6 @@ Page({
     this.setData({
       id: options.id
     })
-    console.log(this.data.id);
     wx.request({
       url: 'https://m.hellomrbigbigshot.xyz/api/page/detail',
       method: 'POST',

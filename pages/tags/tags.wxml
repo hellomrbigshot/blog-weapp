@@ -4,11 +4,11 @@
   <view class="container-head">共有{{total}}个标签</view>
   <view class="tag-list">
     <view class="tag-item" wx:for="{{tags}}" wx:key="{{index}}" wx:for-item="tag">
-      <navigator class="tag-item-head" url="../articleContent/articleContent?id={{item._id}}">{{tag.name}}</navigator>
+      <navigator class="tag-item-head" url="../tagContent/tagContent?id={{item._id}}">{{tag.name}}</navigator>
       <view class="tag-item-line"></view>
       <view class="tag-item-content">{{tag.description}}</view>
       <view class="tag-item-line"></view>
-      <view class="tag-item-bottom">标签下共有 <navigator class="tag-item-bottom-href">{{tag.page_num}}</navigator> 篇文章</view>
+      <view class="tag-item-bottom">标签下共有 <navigator class="tag-item-bottom-href" url="../tagContent/tagContent?id={{item._id}}">{{tag.page_num}}</navigator> 篇文章</view>
     </view>
   </view>
   <van-tabbar active="{{ active }}" bind:change="onChange">

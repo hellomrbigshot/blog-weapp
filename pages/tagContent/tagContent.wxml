@@ -1,2 +1,11 @@
 <!--pages/tagContent/tagContent.wxml-->
-<text>pages/tagContent/tagContent.wxml</text>
+<view class="container">
+  <view class="tag-info-box" hover-class="none" hover-stop-propagation="false">
+    <view class="tag-info">
+      <view class="tag-title">{{name}}</view>
+      <view class="tag-meta">{{total}}篇文章</view>
+    </view>
+    <article-list api="/api/page/pagelist" query-obj="{{query_obj}}"></article-list>
+  </view>
+</view>
+  
