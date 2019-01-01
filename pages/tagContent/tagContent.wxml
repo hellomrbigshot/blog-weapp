@@ -5,7 +5,9 @@
       <view class="tag-title">{{name}}</view>
       <view class="tag-meta">{{total}}篇文章</view>
     </view>
-    <article-list api="/api/page/pagelist" query-obj="{{query_obj}}"></article-list>
+  </view>
+  <view class="article-list">
+    <article wx:for="{{articles}}" wx:for-index="i" wx:key="i" wx:for-item="article" article="{{article}}"></article>
   </view>
 </view>
   

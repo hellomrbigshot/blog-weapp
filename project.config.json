@@ -35,7 +35,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": 0,
@@ -60,6 +60,12 @@
 					"name": "tag详情页",
 					"pathName": "pages/tagContent/tagContent",
 					"query": "id=JavaScript"
+				},
+				{
+					"id": -1,
+					"name": "文章列表页",
+					"pathName": "pages/articles/articles",
+					"query": ""
 				}
 			]
 		}

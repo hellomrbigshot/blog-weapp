@@ -1,4 +1,6 @@
 // pages/tagContent/tagContent.js
+const marked = require('../../utils/marked.js');
+const util = require('../../utils/util.js');
 Page({
 
   /**
@@ -7,6 +9,7 @@ Page({
   data: {
     name: '',
     total: 0,
+    articles: [],
     query_obj: {
       type: 'tag',
       status: 'normal',
@@ -27,14 +30,14 @@ Page({
       'query_obj.content': this.data.name
     })
     this.getTagDetail();
-    this.getPageNum();
+    this.getPage();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
@@ -92,7 +95,7 @@ Page({
       }
     })
   },
-  getPageNum: function () {
+  getPage: function () {
     wx.request({
       url: 'https://m.hellomrbigbigshot.xyz/api/page/pagelist',
       method: 'POST',
@@ -107,7 +110,14 @@ Page({
       },
       success: res => {
         this.setData({
-          total: res.data.data.total
+          'total': res.data.data.total,
+          'articles': this.data.articles.concat(res.data.data.result.map(item => {
+              item.create_date = util.formatTime(item.create_date, '3');
+              item.update_date = util.formatTime(item.update_date, '3');
+              item.content = marked(item.content).replace(/<[^>]+>/g, '');
+              return item;
+            })
+          )
         })
       }
     })

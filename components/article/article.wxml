@@ -1,0 +1,17 @@
+<navigator url="../articleContent/articleContent?id={{article._id}}" class="item">
+  <view class='article-tag'>来自标签
+    <view wx:for="{{article.tags}}"  wx:for-index="j" wx:key="j" wx:for-article="tag" class='article-tag-name'>
+      <navigator class='article-tag-a'>{{tag}}</navigator>
+      <view class='article-tag-dot' wx:if="{{j<article.tags.length-1}}">, </view>
+    </view>
+  </view>
+  <view>
+    <view class='article-title'>{{article.title}}</view>
+  </view>
+  <view class="article-content" hover-class="" hover-stop-propagation="false">{{ article.content }}</view>
+  <view class='article-create-info'>
+    <view class='article-create-info-detail article-create-info-user'>{{ article.create_user }}</view>
+    <view class='article-create-info-detail article-create-info-dot'>·</view>
+    <view class='article-create-info-detail article-create-info-time'>{{ article.update_date }}</view>
+  </view>
+</navigator>
