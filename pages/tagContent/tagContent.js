@@ -10,7 +10,9 @@ Page({
     name: '',
     total: 0,
     articles: [],
-    query_obj: {
+    search_obj: {
+      pageSize: 5,
+      page: 1,
       type: 'tag',
       status: 'normal',
       content: '',
@@ -27,10 +29,10 @@ Page({
       name: options.id
     })
     this.setData({
-      'query_obj.content': this.data.name
+      'search_obj.content': this.data.name
     })
     this.getTagDetail();
-    this.getPage();
+    this.getList();
   },
 
   /**
@@ -65,14 +67,21 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.setData({
+      'search_obj.page': 1
+    });
+    this.getList();
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    if (this.data.search_obj.page * this.data.search_obj.pageSize >= this.data.total) return false;
+    this.setData({
+      'search_obj.page': this.data.search_obj.page + 1
+    });
+    this.getList();
   },
 
   /**
@@ -95,20 +104,20 @@ Page({
       }
     })
   },
-  getPage: function () {
+  getList: function () {
     wx.request({
       url: 'https://m.hellomrbigbigshot.xyz/api/page/pagelist',
       method: 'POST',
-      data: {
-        type: 'tag',
-        status: 'normal',
-        content: this.data.name,
-        secret: false
-      },
+      data: this.data.search_obj,
       header: {
         'content-type': 'application/x-www-form-urlencoded'
       },
       success: res => {
+        if (this.data.search_obj.page === 1) {
+          this.setData({
+            'articles': []
+          })
+        }
         this.setData({
           'total': res.data.data.total,
           'articles': this.data.articles.concat(res.data.data.result.map(item => {

@@ -1,7 +1,12 @@
 <navigator url="../articleContent/articleContent?id={{article._id}}" class="item">
   <view class='article-tag'>来自标签
-    <view wx:for="{{article.tags}}"  wx:for-index="j" wx:key="j" wx:for-article="tag" class='article-tag-name'>
-      <navigator class='article-tag-a'>{{tag}}</navigator>
+    <view
+      class='article-tag-name'
+      wx:for="{{article.tags}}"  
+      wx:for-index="j" 
+      wx:key="j" 
+      wx:for-item="tag">
+      <navigator class='article-tag-a' url="../tagContent/tagContent?id={{tag}}">{{tag}}</navigator>
       <view class='article-tag-dot' wx:if="{{j<article.tags.length-1}}">, </view>
     </view>
   </view>
