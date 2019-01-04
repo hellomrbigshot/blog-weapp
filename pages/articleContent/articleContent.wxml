@@ -11,7 +11,7 @@
           <image src="https://m.hellomrbigbigshot.xyz/api/file/avatar/user?username={{article.create_user}}" class="article-avatar" mode="aspectFit"/>
           <view class="article-info-text" hover-class="none" hover-stop-propagation="false">
             <view class="article-create">{{article.create_user}}</view>
-            <view class="article-time">{{article.create_date}}</view>
+            <view class="article-time">{{article.create_time}}</view>
           </view>
         </view>
       </view>

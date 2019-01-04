@@ -18,7 +18,7 @@ Page({
       status: 'normal',
       type: '',
       secret: false,
-      sort: 'update_date'
+      sort: 'update_time'
     }
   },
 
@@ -112,8 +112,8 @@ Page({
           }
           this.setData({
             'articles': this.data.articles.concat(res.data.data.result.map(item => {
-                item.create_date = util.formatTime(item.create_date, '3');
-                item.update_date = util.formatTime(item.update_date, '3');
+                item.create_time = util.formatTime(item.create_time, '3');
+                item.update_time = util.formatTime(item.update_time, '3');
                 item.content = marked(item.content).replace(/<[^>]+>/g, '');
                 return item;
               })

@@ -42,7 +42,7 @@ Page({
           //设置数据
           this.setData({
             content: data,
-            'article.create_date': util.formatTime(this.data.article.create_date, '3')
+            'article.create_time': util.formatTime(this.data.article.create_time, '3')
           });
         }
       }
