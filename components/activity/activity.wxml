@@ -1,0 +1,29 @@
+<!--components/activity/activity.wxml-->
+<view class="activity">
+  <view class="activity-head">
+    <view class="avatar">
+      <image class="user-avatar" src="https://m.hellomrbigbigshot.xyz/api/file/avatar/user?username={{activity.create_user}}"></image>
+    </view>
+    <view class="user-info">
+      <view class="user-name">{{activity.create_user}}</view>
+      <view class="user-action">
+        <text wx:if="{{activity.type==='page'&&activity.content.update_time===activity.content.create_time}}">发布了文章</text>
+        <text wx:elif="{{activity.type==='page'&&activity.content.update_time!==activity.content.create_time}}">更新了文章</text>
+        <text wx:else>发表了评论</text>
+        <text class="user-time">{{activity.update_time}}</text>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{activity.type==='comment'}}" class="activity-comment">
+    <navigator url="../articleContent/articleContent?id={{activity.content.page_id}}">
+      <view class="comment-head">{{activity.content.content}}</view>
+      <view class="comment-content">{{activity.content.page_title}}</view>
+    </navigator>
+  </view>
+  <view wx:else class="activity-article">
+    <navigator url="../articleContent/articleContent?id={{activity.content._id}}">
+      <view class="article-head">{{activity.content.title}}</view>
+      <view class="article-content">{{activity.content.content}}</view>
+    </navigator>
+  </view>
+</view>

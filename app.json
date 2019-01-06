@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/articleContent/articleContent",
     "pages/tags/tags",
-    "pages/tagContent/tagContent"
+    "pages/tagContent/tagContent",
+    "pages/userInfo/userInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",

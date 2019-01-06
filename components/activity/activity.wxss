@@ -1,0 +1,66 @@
+/* components/activity/activity.wxss */
+.activity {
+  margin-top: 30rpx;
+  padding: 20rpx;
+  background: #fff;
+}
+.activity-head {
+  overflow: auto;
+  
+}
+.activity .avatar {
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+}
+.user-avatar {
+  border-radius: 50%;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.user-info {
+  float: left;
+  margin-left: 20rpx;
+}
+.user-info .user-name {
+  font-size: 32rpx;
+}
+.user-info .user-action {
+  font-size: 24rpx;
+  color: #cdcdcd;
+  margin-top: 4rpx;
+} 
+.user-action .user-time {
+  margin-left: 20rpx;
+}
+.comment-head {
+  color: #333;
+  padding: 10rpx 0;
+}
+.comment-content {
+  padding: 10px 0 5px 20px;
+  -webkit-box-shadow: 0 1px 2px 1px #ddd;
+  box-shadow: 0 1px 2px 1px #ddd;
+  color: #06c;
+  font-size: 18px;
+}
+.article-head {
+  margin: 10rpx 0;
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #000;
+  line-height: 56rpx;
+  vertical-align: middle;
+}
+.article-content {
+  margin-bottom: 15px;
+  color: #888;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.5;
+  word-break: break-all;
+  overflow: hidden;
+  font-size: 14px;
+}

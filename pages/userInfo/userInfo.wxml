@@ -1,0 +1,23 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class="container">
+  <view class="head">
+    <view class="user-info">
+      <image class="user-avatar" src="https://m.hellomrbigbigshot.xyz/api/file/avatar/user?username={{userInfo.username}}"></image>
+      <view class="user-info-text">
+        <view class="user-info-name">{{userInfo.username}}</view>
+        <view class="user-info-bio">{{userInfo.bio}}</view>
+      </view>
+    </view>
+  </view>
+  <van-tabs active="{{active}}" bind:change="onChange">
+    <van-tab title="动态({{num_obj.activity_num}})">
+      <activity wx:for="{{activity_list.activity_list}}" wx:for-index="i" wx:key="i" wx:for-item="activity" activity="{{activity}}"></activity>
+    </van-tab>
+    <van-tab title="文章({{num_obj.page_num}})">
+      <activity wx:for="{{activity_list.page_list}}" wx:for-index="i" wx:key="i" wx:for-item="activity" activity="{{activity}}"></activity>
+    </van-tab>
+    <van-tab title="评论({{num_obj.comment_num}})">
+      <activity wx:for="{{activity_list.comment_list}}" wx:for-index="i" wx:key="i" wx:for-item="activity" activity="{{activity}}"></activity>
+    </van-tab>
+  </van-tabs>
+</view>

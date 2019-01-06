@@ -15,7 +15,9 @@
   </view>
   <view class="article-content" hover-class="" hover-stop-propagation="false">{{ article.content }}</view>
   <view class='article-create-info'>
-    <view class='article-create-info-detail article-create-info-user'>{{ article.create_user }}</view>
+    <view class='article-create-info-detail article-create-info-user'>
+      <navigator url="../userInfo/userInfo?name={{article.create_user}}">{{ article.create_user }}</navigator>
+    </view>
     <view class='article-create-info-detail article-create-info-dot'>·</view>
     <view class='article-create-info-detail article-create-info-time'>{{ article.update_time }}</view>
   </view>
