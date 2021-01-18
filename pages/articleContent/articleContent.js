@@ -20,7 +20,7 @@ Page({
       id: options.id
     })
     wx.request({
-      url: 'https://m.hellomrbigbigshot.xyz/api/page/detail',
+      url: 'https://hellomrbigbigshot.xyz/api/page/detail',
       method: 'POST',
       data: {
         id: this.data.id,
@@ -48,7 +48,7 @@ Page({
       }
     })
     wx.request({
-      url: 'https://m.hellomrbigbigshot.xyz/api/comment/getpagecommentlist',
+      url: 'https://hellomrbigbigshot.xyz/api/comment/getpagecommentlist',
       method: 'POST',
       data: {
         page_id: this.data.id

@@ -1,79 +1,97 @@
 {
-	"description": "项目配置文件。",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": true,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"nodeModules": false,
-		"autoAudits": false
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.4.3",
-	"appid": "wx9639d80e546e759e",
-	"projectname": "myblog",
-	"isGameTourist": false,
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 5,
-			"list": [
-				{
-					"id": 0,
-					"name": "博客详情页",
-					"pathName": "pages/articleContent/articleContent",
-					"query": "id=5c19a3909c156142838e3926"
-				},
-				{
-					"id": -1,
-					"name": "首页",
-					"pathName": "pages/index/index",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "标签列表页",
-					"pathName": "pages/tags/tags",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "tag详情页",
-					"pathName": "pages/tagContent/tagContent",
-					"query": "id=JavaScript"
-				},
-				{
-					"id": -1,
-					"name": "文章列表页",
-					"pathName": "pages/articles/articles",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "用户详情页",
-					"pathName": "pages/userInfo/userInfo",
-					"query": "name=Yeachan"
-				}
-			]
-		}
-	}
+  "description": "项目配置文件。",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "scopeDataCheck": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.4.3",
+  "appid": "wx9639d80e546e759e",
+  "projectname": "myblog",
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "博客详情页",
+          "pathName": "pages/articleContent/articleContent",
+          "query": "id=5c19a3909c156142838e3926"
+        },
+        {
+          "id": -1,
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "标签列表页",
+          "pathName": "pages/tags/tags",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "tag详情页",
+          "pathName": "pages/tagContent/tagContent",
+          "query": "id=JavaScript"
+        },
+        {
+          "id": -1,
+          "name": "文章列表页",
+          "pathName": "pages/articles/articles",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "用户详情页",
+          "pathName": "pages/userInfo/userInfo",
+          "query": "name=Yeachan"
+        }
+      ]
+    }
+  }
 }

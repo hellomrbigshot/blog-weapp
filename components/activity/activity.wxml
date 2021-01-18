@@ -2,7 +2,7 @@
 <view class="activity">
   <view class="activity-head">
     <view class="avatar">
-      <image class="user-avatar" src="https://m.hellomrbigbigshot.xyz/api/file/avatar/user?username={{activity.create_user}}"></image>
+      <image class="user-avatar" src="https://hellomrbigbigshot.xyz/api/file/avatar/user?username={{activity.create_user}}"></image>
     </view>
     <view class="user-info">
       <view class="user-name">{{activity.create_user}}</view>

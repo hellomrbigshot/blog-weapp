@@ -79,7 +79,7 @@ Page({
   getList: function () {
     const self = this;
     wx.request({
-      url: 'https://m.hellomrbigbigshot.xyz/api/tag/taglist',
+      url: 'https://hellomrbigbigshot.xyz/api/tag/taglist',
       method: 'POST',
       data: this.data.search_obj,
       header: {

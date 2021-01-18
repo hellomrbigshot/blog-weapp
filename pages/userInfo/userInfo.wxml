@@ -2,7 +2,7 @@
 <view class="container">
   <view class="head">
     <view class="user-info">
-      <image class="user-avatar" src="https://m.hellomrbigbigshot.xyz/api/file/avatar/user?username={{userInfo.username}}"></image>
+      <image class="user-avatar" src="https://hellomrbigbigshot.xyz/api/file/avatar/user?username={{userInfo.username}}"></image>
       <view class="user-info-text">
         <view class="user-info-name">{{userInfo.username}}</view>
         <view class="user-info-bio">{{userInfo.bio}}</view>

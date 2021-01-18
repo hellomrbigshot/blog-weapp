@@ -92,7 +92,7 @@ Page({
   },
   getTagDetail: function () {
     wx.request({
-      url: 'https://m.hellomrbigbigshot.xyz/api/tag/tagdetail',
+      url: 'https://hellomrbigbigshot.xyz/api/tag/tagdetail',
       method: 'POST',
       data: { name: this.data.name },
       header: {
@@ -106,7 +106,7 @@ Page({
   },
   getList: function () {
     wx.request({
-      url: 'https://m.hellomrbigbigshot.xyz/api/page/pagelist',
+      url: 'https://hellomrbigbigshot.xyz/api/page/pagelist',
       method: 'POST',
       data: this.data.search_obj,
       header: {

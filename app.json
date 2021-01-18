@@ -14,5 +14,6 @@
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true,
     "onReachBottomDistance": 10
-  }
+  },
+  "sitemapLocation": "sitemap95.json"
 }

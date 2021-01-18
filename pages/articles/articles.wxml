@@ -1,6 +1,6 @@
 <view class='container'>
   <view class="article-list">
-    <article wx:for="{{articles}}"  wx:for-index="i" wx:for-item="article" wx:key="{{i}}" article="{{article}}"></article>
+    <article wx:for="{{articles}}" wx:for-index="i" wx:for-item="article" wx:key="{{i}}" article="{{article}}"></article>
   </view>
   <van-tabbar active="{{ active }}" bind:change="onChange">
     <van-tabbar-item icon="shop">首页</van-tabbar-item>

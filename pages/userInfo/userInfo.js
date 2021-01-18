@@ -96,7 +96,7 @@ Page({
   },
   getUserInfo: function () {
     wx.request({
-      url: 'https://m.hellomrbigbigshot.xyz/api/user/detail',
+      url: 'https://hellomrbigbigshot.xyz/api/user/detail',
       method: 'POST',
       data: {
         username: this.data.name
@@ -120,7 +120,7 @@ Page({
     };
     if (send_data.type === 'activity') delete send_data.type;
     wx.request({
-      url: 'https://m.hellomrbigbigshot.xyz/api/activity/getnum',
+      url: 'https://hellomrbigbigshot.xyz/api/activity/getnum',
       method: 'POST',
       data: send_data,
       header: {
@@ -147,7 +147,7 @@ Page({
     // 不分页，防止数据重复请求
     if (this.data.activity_list[key].length) return;
     wx.request({
-      url: 'https://m.hellomrbigbigshot.xyz/api/activity/getlist',
+      url: 'https://hellomrbigbigshot.xyz/api/activity/getlist',
       method: 'POST',
       data: send_data,
       header: {

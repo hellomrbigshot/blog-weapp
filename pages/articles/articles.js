@@ -94,7 +94,7 @@ Page({
   getList: function () {
     const self = this;
     wx.request({
-      url: 'https://m.hellomrbigbigshot.xyz/api/page/pagelist',
+      url: 'https://hellomrbigbigshot.xyz/api/page/pagelist',
       method: 'POST',
       data: this.data.search_obj,
       header: {

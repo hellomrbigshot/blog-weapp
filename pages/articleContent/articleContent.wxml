@@ -9,7 +9,7 @@
         </view>
         <view class="article-info" hover-class="none" hover-stop-propagation="false" wx:if="article.create_user">
           <navigator url="../userInfo/userInfo?name={{article.create_user}}" >
-            <image src="https://m.hellomrbigbigshot.xyz/api/file/avatar/user?username={{article.create_user}}" class="article-avatar" mode="aspectFit"/>
+            <image src="https://hellomrbigbigshot.xyz/api/file/avatar/user?username={{article.create_user}}" class="article-avatar" mode="aspectFit"/>
             <view class="article-info-text" hover-class="none" hover-stop-propagation="false">
               <view class="article-create">{{article.create_user}}</view>
               <view class="article-time">{{article.create_time}}</view>
@@ -29,7 +29,7 @@
     <view wx:else class="comment-list">
       <view class="comment-item" wx:for="{{comments}}" wx:for-item="comment" wx:for-index="i" wx:key="i">
         <view class="comment-item-head">
-          <image src="https://m.hellomrbigbigshot.xyz/api/file/avatar/user?username={{comment.create_user}}" class="article-avatar" class="comment-avatar" mode="aspectFit"/>
+          <image src="https://hellomrbigbigshot.xyz/api/file/avatar/user?username={{comment.create_user}}" class="article-avatar" class="comment-avatar" mode="aspectFit"/>
           <view class="comment-user">{{comment.create_user}}</view>
         </view>
         <view class="comment-content">{{comment.content}}</view>
